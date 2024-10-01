@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 100% del ancho de la ventana */
+    height: 100%; /* 100% de la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 300px; /* Altura del carrusel, ajustable */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada ítem ocupará el 100% del ancho del contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 80%; /* Establece un tamaño máximo del 80% del ancho del contenedor */
+    max-height: 80%; /* Establece un tamaño máximo del 80% de la altura del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1; /* Asegura que los botones estén por encima del carrusel */
+}
+
+.prev-btn {
+    left: 10px; /* Posición del botón anterior */
+}
+
+.next-btn {
+    right: 10px; /* Posición del botón siguiente */
+}

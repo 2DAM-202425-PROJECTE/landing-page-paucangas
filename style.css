@@ -56,3 +56,19 @@ button {
 .next-btn {
     right: 10px; /* Posición del botón siguiente */
 }
+
+.bckg {
+    background-image: url('fondoPaginaGIF2.gif');
+    background-size: cover; /* Ajusta la imagen al contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ff80b5, #9089fc); /* Colores del degradado */
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    -webkit-text-fill-color: transparent; /* Hace que el color de relleno del texto sea transparente */
+}

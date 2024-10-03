@@ -12,49 +12,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* 100% del ancho de la ventana */
-    height: 100%; /* 100% de la altura de la ventana */
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    margin-bottom: 100px; /* Ajusta este valor según sea necesario */
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    height: 300px; /* Altura del carrusel, ajustable */
+    width: calc(100% * 5); /* Adjust based on the number of items */
 }
 
 .carousel-item {
-    min-width: 100%; /* Cada ítem ocupará el 100% del ancho del contenedor */
+    min-width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .carousel-item img {
-    max-width: 80%; /* Establece un tamaño máximo del 80% del ancho del contenedor */
-    max-height: 80%; /* Establece un tamaño máximo del 80% de la altura del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%;
+    height: auto;
 }
 
 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1; /* Asegura que los botones estén por encima del carrusel */
+    z-index: 1;
 }
 
 .prev-btn {
-    left: 10px; /* Posición del botón anterior */
+    left: 10px;
 }
 
 .next-btn {
-    right: 10px; /* Posición del botón siguiente */
+    right: 10px;
 }
 
 .bckg {
@@ -67,8 +67,51 @@ h1 {
     font-family: 'Playfair Display', serif;
 }
 
+h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
+}
+
 .gradient-text {
     background: linear-gradient(to right, #ff80b5, #9089fc); /* Colores del degradado */
     -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
     -webkit-text-fill-color: transparent; /* Hace que el color de relleno del texto sea transparente */
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading img {
+    width: 100px; /* Ajusta el tamaño del GIF según sea necesario */
+}
+
+/* CSS para la animación de aparición */
+.appear {
+    opacity: 1;              /* Final opacity */
+    transform: scale(1);     /* Final scale */
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Transición */
+}
+
+/* Inicializa el estilo para el efecto */
+h4 {
+    opacity: 0;              /* Inicial opacity */
+    transform: scale(0);     /* Inicial scale */
+}
+
+a {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }

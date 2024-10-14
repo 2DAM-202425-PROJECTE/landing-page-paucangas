@@ -47,16 +47,15 @@ button {
     padding: 10px;
     z-index: 1;
 }
-
-.form-button {
-    position: static; /* or remove this line if you want to use default positioning */
-    top: auto;
-    transform: none;
+#form-button.button-submit {
     border: none;
     cursor: pointer;
     padding: 10px;
     z-index: 1;
-    margin-bottom: 2200px; /* Ajusta este valor según sea necesario */
+    margin-top: 40px; /* Adjust this value as needed */
+    position: relative; /* Ensure it is not affected by absolute positioning */
+    top: auto;
+    transform: none;
 }
 
 .prev-btn {

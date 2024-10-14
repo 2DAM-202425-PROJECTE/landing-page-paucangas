@@ -42,11 +42,21 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
     padding: 10px;
     z-index: 1;
+}
+
+.form-button {
+    position: static; /* or remove this line if you want to use default positioning */
+    top: auto;
+    transform: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    margin-bottom: 2200px; /* Ajusta este valor según sea necesario */
 }
 
 .prev-btn {
@@ -114,4 +124,11 @@ a {
 a:hover {
     transform: scale(1.2);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.custom-select {
+    -webkit-appearance: none; /* Oculta el icono por defecto en Safari y Chrome */
+    -moz-appearance: none; /* Oculta el icono por defecto en Firefox */
+    appearance: none; /* Oculta el icono por defecto en otros navegadores */
+    background-image: none; /* Asegura que no haya imagen de fondo */
 }

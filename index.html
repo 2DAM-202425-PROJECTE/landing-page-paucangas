@@ -16,7 +16,7 @@
 
   <div class="bg-white">
     <!-- Header -->
-    <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
+    <header class="fixed inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
@@ -33,13 +33,12 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Product</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Features</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Marketplace</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Company</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Curiositats</a>
+          <a href="contacta.html" class="text-sm font-semibold leading-6 text-purple-800">Contacta'm</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-purple-800">Habilitats</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"><span aria-hidden="true"></span></a>
+          <a class="text-sm font-semibold leading-6 text-gray-900"><span aria-hidden="true"></span></a>
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -62,13 +61,12 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Product</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Features</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Marketplace</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Company</a>
+                <a href="#" class="-mx-3 block rounded-lg px-6 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Curiositats</a>
+                <a href="#" class="-mx-3 block rounded-lg px-6 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Contacta'm</a>
+                <a href="#" class="-mx-3 block rounded-lg px-6 py-2 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">Habilitats</a>
               </div>
               <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"></a>
+                <a class="-mx-3 block rounded-lg px-6 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"></a>
               </div>
             </div>
           </div>
@@ -238,5 +236,10 @@
       </div>
     </div>
   </footer>
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('loading').style.display = 'none';
+    });
+  </script>
   </body>
 </html>

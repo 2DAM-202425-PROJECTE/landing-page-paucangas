@@ -54,65 +54,45 @@ window.addEventListener('load', function() {
     }
 });
 
-window.addEventListener('load', function() {
-    const loading = document.getElementById('loading');
-    if (loading) {
-        loading.style.display = 'none';
-    }
-});
-
-
-window.addEventListener('load', function() {
-    const loading = document.getElementById('loading');
-    if (loading) {
-        loading.style.display = 'none';
-    }
-});
-
-// Selecciona todos los elementos h2
+// Selecciona todos los elementos h2 para el efecto de máquina de escribir
 const headings = document.querySelectorAll("h2");
-
-// Para cada elemento h2, aplicamos el efecto de máquina de escribir
 headings.forEach((element) => {
-    const text = element.textContent;  // Toma el texto que ya está en el HTML
-    element.textContent = "";  // Limpia el contenido para comenzar el efecto
+    const text = element.textContent;
+    element.textContent = "";
     let i = 0;
 
     function typeWriter() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100); // Cambia la velocidad aquí
+            setTimeout(typeWriter, 100);
         }
     }
 
     typeWriter();
 });
 
-// Nuevo efecto dinámico para h3
+// Efecto dinámico para h3
 const headingsH3 = document.querySelectorAll("h3");
-
-const colors = ['#FF0000', '#FF7F00', '#00BFFF', '#00FF00', '#0000FF', '#4B0082', '#8B00FF']; // Updated colors
+const colors = ['#FF0000', '#FF7F00', '#00BFFF', '#00FF00', '#0000FF', '#4B0082', '#8B00FF'];
 
 headingsH3.forEach((element) => {
     const text = element.textContent;
-    element.textContent = ""; // Clear the content to start the effect
+    element.textContent = "";
     let i = 0;
 
     function dynamicZoomEffect() {
         if (i < text.length) {
-            // Add the character wrapped in a span with transition effects
             element.innerHTML += `<span style="opacity: 0; transform: scale(0.5) rotate(10deg); transition: opacity 0.5s ease, transform 0.7s ease; color: ${colors[i % colors.length]};">${text.charAt(i)}</span>`;
             const span = element.querySelectorAll("span")[i];
 
-            // Apply the zoom and rotation effect after a small delay
             setTimeout(() => {
-                span.style.opacity = 1; // Make the text visible
-                span.style.transform = "scale(1.2) rotate(0deg)"; // Increase its size and rotate to its original position
+                span.style.opacity = 1;
+                span.style.transform = "scale(1.2) rotate(0deg)";
             }, 100);
 
             i++;
-            setTimeout(dynamicZoomEffect, 100); // Control the speed of the effect
+            setTimeout(dynamicZoomEffect, 100);
         }
     }
 
@@ -123,8 +103,9 @@ headingsH3.forEach((element) => {
 const headingsH4 = document.querySelectorAll("h4");
 
 headingsH4.forEach((element) => {
-    // Aplicamos un retardo para que el efecto se note
     setTimeout(() => {
-        element.classList.add('appear'); // Añade la clase que activa la animación
-    }, 500);  // Retardo inicial
+        element.classList.add('appear');
+    }, 500);
 });
+
+// Formulario de contacto y envío de datos con EmailJS
